@@ -1,0 +1,889 @@
+@import "variables";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    font-family: arial, sans-serif;
+    
+    h2 {
+        margin-top: 0;
+        color: @darkBlueColor;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+    
+    h3 {
+        margin-top: 0;
+        color: @darkBlueColor;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+    
+    p, a, input, textarea {
+        color:  #333;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    
+//HEADER
+    header {
+        background-color: @darkBlueColor;
+        box-sizing: border-box;
+        
+        font-weight: 400;
+        color: #fff;
+        
+        padding: 50px;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        .header__flexWrap {
+            display: flex;
+            flex-wrap: wrap;
+            
+            .respond-to(small-desktops-and-smaller; {
+                display: flex;
+                flex-direction: column;
+                
+                align-items: center;
+            });
+            
+            div {
+                flex: 1;
+                
+                .respond-to(small-desktops-and-smaller; {
+                    width: 100%;
+                });
+            }
+            
+            h1 {
+                margin: 0;
+                
+                font-size: 60px;
+                font-weight: 400;
+                
+                .respond-to(small-desktops-and-smaller; {
+                    text-align: center;
+                });
+                
+                .respond-to(wide-phones; {
+                    font-size: 58px;
+                });
+                
+                .respond-to(phones; {
+                    font-size: 37px;
+                });
+            }
+            
+            ul {
+                margin: 0;
+                padding: 20px 0 0 0;
+                
+                li {
+                    list-style: none;
+                    
+                    font-size: 20px;
+                    line-height: 36px;
+                    
+                    .respond-to(small-desktops-and-smaller; {
+                        text-align: center;
+                        font-size: 16px;
+                    });
+                    
+                    .respond-to(phones; {
+                        text-align: left;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 15px;
+                    });
+                }
+            }
+            
+            img {
+                display: block;
+                
+                margin: 50px;
+                
+                max-width: 469px;
+                height: 214px;
+                
+                background-color: #fff;
+                
+                .respond-to(small-desktops-and-smaller; {
+                    margin: 50px auto;
+                });
+                
+                .respond-to(small-desktops-and-smaller; {
+                    width: 100%;
+                });
+            }
+        }
+    }
+//END OF HEADER
+    
+//ABOUT PRODUCT
+    .aboutProduct {
+        padding: 50px;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        .aboutProduct__flexWrap {
+            display: flex;
+            justify-content: space-between;
+            
+            .respond-to(small-desktops-and-smaller; {
+                flex-wrap: wrap;
+            });
+            
+            div {
+                .respond-to(small-desktops-and-smaller; {
+                    width: 100%;
+                });
+                
+                &:first-child {
+                    
+                    margin-right: 50px;
+                    
+                    .respond-to(small-desktops-and-smaller; {
+                        margin-right: 0;
+                        width: 100%;
+                    });
+                }
+            }
+            
+            h2 {
+                .respond-to(small-desktops-and-smaller; {
+                    text-align: center;
+                });
+                
+                .respond-to(phones; {
+                    font-size: 20px;
+                });
+            }
+            
+            p {
+                text-align: justify;
+                
+                .respond-to(phones; {
+                    font-size: 14px;
+                });
+            }
+            
+            img {
+                display: block;
+
+                margin: 0 70px 0 auto;
+
+                width: 430px;
+                height: 245px;
+                
+                background-color: @darkBlueColor;
+                
+                .respond-to(small-desktops-and-smaller; {
+                    margin: 0 auto;
+                    max-width: 430px;
+                });
+                
+                .respond-to(phones; {
+                    width: 100%;
+                });
+            }   
+        }
+    }
+//END OF ABOUT PRODUCTS
+    
+//DIGNITY PRODUCTS
+    .dignityProducts {
+        background-color: @brightGreyColor;
+        
+        padding: 50px;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        h2 {
+            margin: 0;
+            padding-bottom: 30px;
+            
+            text-align: center;
+            
+            .respond-to(phones; {
+                font-size: 19px;
+            });
+        }
+        
+        .dignityProducts__flexWrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            div {
+                width: 44%;
+                
+                margin-bottom: 30px;
+                
+                &:nth-child(2n) {
+                    margin-left: 30px;
+                }
+                
+                padding-left: 50px;
+                
+                background: url(../images/plus_icon.png) no-repeat;
+                background-size: 35px;
+                
+                color: #333;
+                line-height: 24px;
+                text-align: justify;
+                
+                &:hover {
+                    background-color: darken(@brightGreyColor, 5%);
+                    cursor: default;
+                }
+                
+                .respond-to(small-desktops-and-smaller; {
+                    width: 40%;
+                });
+                
+                .respond-to(wide-phones; {
+                    width: 100%;
+                    margin: 10px 0;
+                    
+                    background-size: 30px;
+                    padding-left: 40px;
+                    
+                    &:nth-child(2n) {
+                        margin-left: 0;
+                    }
+                });
+                
+                .respond-to(phones; {
+                    width: 100%;
+                    
+                    padding-left: 30px;
+                    
+                    font-size: 14px;
+                    
+                    background-size: 20px;
+                    
+                    &:nth-child(2n) {
+                        margin-left: 0;
+                    }
+                });
+            }
+        }
+    }
+//END OF DIGNITY PRODUCTS
+    
+//SCREENSHOTS
+    .screenshots {
+        padding: 50px;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .screenshots__flexWrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            .screenshots__itemWrap {
+                display: flex;
+                width: 45%;
+                
+                margin: 10px;
+                
+                .respond-to(small-desktops-and-smaller; {
+                    width: 100%;
+                });
+                
+                .respond-to(wide-phones; {
+                    display: block;
+                });
+                
+                .respond-to(phones; {
+                    display: block;
+                });
+                
+                div {
+                    img {
+                        display: block;
+                        
+                        width: 200px;
+                        height: 150px;
+                        
+                        margin-right: 10px;
+                        
+                        background-color: @darkBlueColor;
+                        
+                        .respond-to(wide-phones; {
+                            margin: 0 auto;
+                        });
+                        
+                        .respond-to(phones; {
+                            margin: 0 auto;
+                        });
+                    }
+                    
+                    h3, p {
+                        margin: 0 0 10px 0;
+                    }
+                    
+                    h3 {
+                        .respond-to(lg-desktops; {
+                            font-size: 21px;
+                        });
+                        
+                        .respond-to(wide-phones; {
+                            text-align: center;
+                        });
+                        
+                        .respond-to(phones; {
+                            text-align: center;
+                            font-size: 16px;
+                        });
+                    }
+                    
+                    p {
+                        text-align: justify;
+                        
+                        .respond-to(lg-desktops; {
+                            font-size: 14px;
+                        });
+                        
+                        .respond-to(small-desktops-and-smaller; {
+                            font-size: 14px;
+                        });
+                    }
+                }
+            }
+        }
+    }
+//END OF SCREENSHOTS
+    
+//REVIEWS
+    .reviews {
+        padding: 50px;
+        
+        background-color: @brightGreyColor;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .reviews__flexWrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .reviews__itemWrap {
+                display: flex;
+                
+                margin: 10px;
+                
+                width: 48%;
+                
+                .respond-to(small-desktops; {
+                    margin: 10px 5px;
+                });
+                
+                .respond-to(tablets; {
+                    flex-wrap: nowrap;
+                    flex-grow: 1;
+                });
+                
+                .respond-to(wide-phones; {
+                    flex-wrap: nowrap;
+                    flex-grow: 1;
+                });
+                
+                .respond-to(phones; {
+                    flex-wrap: nowrap;
+                    flex-grow: 1;
+                });
+                
+                img {
+                    display: block;
+                    
+                    width: 75px;
+                    height: 75px;
+                    
+                    background-color: @darkBlueColor;
+                    
+                    border-radius: 50%;
+                    
+                    .respond-to(phones; {
+                        display: none;
+                    });
+                }
+                
+                p {
+                    position: relative;
+                    
+                    margin: 0 0 0 20px;
+                    padding: 10px;
+                    
+                    background-color: #ececec;
+                    
+                    font-size: 14px;
+                    font-style: italic;
+                    font-weight: bold;
+                    text-align: justify;
+                    
+                    .respond-to(phones; {
+                        margin: 0;
+                    });
+                    
+                    &:before {
+                        position: absolute;
+                        display: block;
+                        
+                        content: '';
+                        
+                        top: 20px;
+                        left: -15px;
+                        
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 15px 15px 15px 0;
+                        border-color: transparent #ececec transparent transparent;
+                        
+                        .respond-to(phones; {
+                            display: none;
+                        });
+                    }
+                    
+                    span {
+                        display: inline-block;
+                        margin-top: 10px;
+                        
+                        color: #989898;
+                        
+                        font-style: normal;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+//END OF REVIEWS
+
+//BUY IT NOW
+    .buyItNow {
+        width: 100%;
+        padding: 50px;
+        
+        box-sizing: border-box;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .buyItNow__flexWrapper {
+            display: flex;
+            justify-content: space-between;
+            
+            .respond-to(tablets; {
+                flex-direction: column;
+            });
+            
+            .respond-to(wide-phones; {
+                flex-direction: column;
+            });
+            
+            .respond-to(phones; {
+                flex-direction: column;
+            });
+            
+            .buyItNow__itemWrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                flex-grow: 1;
+                
+                max-width: 400px;
+                align-self: flex-end;
+                
+                margin: 0 20px;
+                padding: 30px;
+                box-sizing: border-box;
+                
+                background-color: @darkBlueColor;
+                border-radius: 10px;
+                
+                .respond-to(tablets; {
+                    align-self: center;
+                    margin: 10px 0;
+                });
+                
+                .respond-to(wide-phones; {
+                    align-self: center;
+                    margin: 10px 0;
+                });
+                
+                .respond-to(phones; {
+                    align-self: center;
+                    margin: 10px 0;
+                });
+                
+                h3, p, a {
+                    text-align: center;
+                }
+                
+                h3 {
+                    color: #fff;
+                }
+                
+                .price {
+                    display: inline-block;
+                    background-color: #fff;
+                    
+                    color: @darkBlueColor;
+                    font-size: 40px;
+                    line-height: 70px;
+                    margin: 0 -26px;
+                    
+                    .respond-to(phones; {
+                        line-height: 40px;
+                    });
+                }
+                
+                ul {
+                    padding-left: 20px;
+                    
+                    .respond-to(small-desktops; {
+                        padding: 0;
+                    });
+                    
+                    .respond-to(phones; {
+                        padding: 0 5px;
+                    });
+                    
+                    li {
+                        color: #fff;
+                        list-style: decimal;
+                        
+                        line-height: 30px;
+                        
+                        .respond-to(lg-desktops; {
+                            font-size: 14px;
+                        });
+                        
+                        .respond-to(small-desktops; {
+                            font-size: 12px;
+                        });
+                        
+                        .respond-to(phones; {
+                            font-size: 14px;
+                        });
+                    }
+                }
+                
+                a {
+                    display: inline-block;
+                    line-height: 50px;
+                    
+                    background-color: #fff;
+                    
+                    border-radius: 10px;
+                    border: 3px solid #fff;
+                    
+                    color: @darkBlueColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    
+                    font-size: 18px;
+                    font-weight: 700;
+                    
+                    .respond-to(phones; {
+                        line-height: 25px;
+                    });
+                    
+                    &:hover {
+                        color: #fff;
+                        background-color: @darkBlueColor;
+                        border: 3px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+//END OF BUY IT NOW
+    
+//CONTACTS
+    .contacts {
+        width: 100%;
+        
+        padding: 50px;
+        box-sizing: border-box;
+        
+        background-color: @darkBlueColor;
+        
+        .respond-to(phones; {
+            padding: 20px;
+        });
+        
+        h2 {
+            color: #fff;
+            text-align: center;
+        }
+        
+        .contacts__flexWrapper {
+            display: flex;
+            justify-content: center;
+            
+            .respond-to(wide-phones; {
+                display: block;
+            });
+            
+            .respond-to(phones; {
+                display: block;
+            });
+            
+            .inputForm {
+                display: flex;
+                justify-content: center;
+                
+                flex-grow: 1;
+                
+                margin: 0 40px;
+                
+                .respond-to(tablets; {
+                    margin: 0;
+                });
+                
+                .respond-to(wide-phones; {
+                    width: 80%;
+                    margin: 0 auto;
+                });
+                
+                .respond-to(phones; {
+                    width: 100%;
+                    margin: 0 auto;
+                });
+                
+                fieldset {
+                    border: none;
+                    width: 100%;
+                    
+                    input, textarea {
+                        width: inherit;
+                        
+                        padding: 5px 10px;
+                        
+                        font: inherit;
+                        color: @darkBlueColor;
+                        
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        border-style: none;
+                        
+                        line-height: 20px;
+                        
+                        &:focus, &:hover {
+                            outline-style: none;
+                            background-color: darken(#fff,10%);
+                        }
+                    }
+                    
+                    input[type="email"] {
+                        margin: 20px 0;
+                    }
+                    
+                    input[type="submit"] {
+                        display: block;
+                        
+                        margin: 20px auto;
+                        
+                        width: 150px;
+                        
+                        background-color: #fff;
+                        border: 3px solid #fff;
+                        border-radius: 5px;
+                        
+                        color: @darkBlueColor;
+                        text-align: center;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        
+                        cursor: pointer;
+                        
+                        .respond-to(phones; {
+                            line-height: 20px;
+                        });
+                        
+                        &:hover {
+                            background-color: @darkBlueColor;
+                            color: #fff;
+                            border: 3px solid #fff;
+                        }
+                    }
+                    
+                    textarea {
+                        height: 170px;
+                        resize: none;
+                    }
+                }
+            }
+            
+            .socialLinks {
+                
+                margin: 0 40px;
+                
+                .respond-to(tablets; {
+                    margin: 0 0 0 20px;
+                });
+                
+                .respond-to(wide-phones; {
+                    width: 200px;
+                    margin: 0 auto;
+                });
+                
+                .respond-to(phones; {
+                    width: 200px;
+                    margin: 0 auto;
+                });
+                
+                p {
+                    color: #fff;
+                    padding-left: 40px;
+                    line-height: 30px;
+                    
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    
+                    .respond-to(tablets; {
+                        line-height: 30px;
+                    });
+                    
+                    .respond-to(wide-phones; {
+                        line-height: 30px;
+                    });
+                    
+                    .respond-to(phones; {
+                        line-height: 30px;
+                    });
+                }
+                
+                &__skype {
+                    background: url(../images/skype_icon.png) no-repeat left center;
+                }
+                
+                &__icq {
+                    background: url(../images/icq_icon.png) no-repeat left center;
+                }
+                
+                &__email {
+                    background: url(../images/email_icon.png) no-repeat left center;
+                }
+                
+                &__phone {
+                    background: url(../images/phone_icon.png) no-repeat left center;
+                }
+                
+                div {
+                    margin-top: 10px;
+                    
+                    a {
+                        display: inline-block;
+                        
+                        width: 55px;
+                        height: 55px;
+                        
+                        padding: 0;
+                        margin: 10px;
+                        box-sizing: border-box;
+                        
+                        background-color: #fff;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                        
+                        color: @darkBlueColor;
+                        text-align: center;
+                        font-size: 30px;
+                        line-height: 55px;
+                        
+                        .respond-to(tablets; {
+                            width: 30px;
+                            height: 30px;
+                            font-size: 16px;
+                            line-height: 25px;
+                            margin: 0 3px;
+                        });
+                        
+                        .respond-to(wide-phones; {
+                            width: 30px;
+                            height: 30px;
+                            font-size: 16px;
+                            line-height: 25px;
+                            margin: 0 3px;
+                        });
+                        
+                        .respond-to(phones; {
+                            width: 30px;
+                            height: 30px;
+                            font-size: 16px;
+                            line-height: 25px;
+                            margin: 0 3px;
+                        });
+                        
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        
+                        &:hover {
+                            border: 3px solid #fff;
+                            background-color: @darkBlueColor;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+//END OF CONTACTS
+    
+//FOOTER
+    footer {
+        background-color: @brightGreyColor;
+        text-align: center;
+        
+        p {
+            margin: 0;
+            padding: 5px 0;
+        }
+    }
+//END OF FOOTER
+}

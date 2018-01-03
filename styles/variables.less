@@ -1,0 +1,36 @@
+//VARIABLES
+
+//COLORS
+@darkBlueColor: #445161;
+@brightGreyColor: #f5f5f5;
+
+//FONTS
+
+//MIXINS
+//ADAPTIVITY MIXIN
+.respond-to (@device, @content) {
+    & when (@device = phones) {
+        @media screen and (max-width: 480px) { @content(); }
+    }
+    & when (@device = wide-phones) {
+        @media screen and (min-width: 480px) and (max-width: 767px) { @content(); }
+    }
+    & when (@device = tablets) {
+        @media screen and (min-width: 768px) and (max-width: 991px) { @content(); }
+    }
+    & when (@device = small-desktops-and-smaller) {
+        @media screen and (max-width: 1200px) { @content(); }
+    }
+    & when (@device = small-desktops) {
+        @media screen and (min-width: 992px) and (max-width: 1199px) { @content(); }
+    }
+    & when (@device = lg-desktops) {
+        @media screen and (min-width: 1200px) and (max-width: 1440px) { @content(); }
+    }
+    & when (@device = xlg-desktops) {
+        @media screen and (min-width: 1441px) { @content(); }
+    }   
+}
+//END OF ADAPTIVITY MIXIN
+
+//END OF VARIABLES
